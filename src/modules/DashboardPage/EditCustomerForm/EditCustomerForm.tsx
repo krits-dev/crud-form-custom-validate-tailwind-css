@@ -94,6 +94,7 @@ function EditCustomerForm() {
               id='name'
               label='Name'
               value={formValues.name}
+              maxLength={12}
               pattern={patternLettersNoSpaces}
               onChangeForm={onChangeForm}
               error={formErrors.name}
@@ -104,6 +105,7 @@ function EditCustomerForm() {
               id='last_name'
               label='Last Name'
               value={formValues.last_name}
+              maxLength={12}
               pattern={patternLettersNoSpaces}
               onChangeForm={onChangeForm}
               error={formErrors.last_name}

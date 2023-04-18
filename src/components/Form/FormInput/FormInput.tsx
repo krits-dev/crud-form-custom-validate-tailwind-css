@@ -40,7 +40,7 @@ FormInput.defaultProps = {
   id: '',
   label: '',
   value: '',
-  maxLength: 12,
+  maxLength: 25,
   error: '',
   validate: () => null,
   onChangeForm: () => null,

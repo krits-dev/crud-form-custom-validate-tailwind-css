@@ -101,6 +101,7 @@ function AddCustomerForm() {
               id='name'
               label='Name'
               value={formValues.name}
+              maxLength={12}
               pattern={patternLettersNoSpaces}
               onChangeForm={onChangeForm}
               error={formErrors.name}
@@ -111,6 +112,7 @@ function AddCustomerForm() {
               id='last_name'
               label='Last Name'
               value={formValues.last_name}
+              maxLength={12}
               pattern={patternLettersNoSpaces}
               onChangeForm={onChangeForm}
               error={formErrors.last_name}
@@ -123,7 +125,6 @@ function AddCustomerForm() {
             id='company'
             label='Company'
             value={formValues.company}
-            maxLength={25}
             pattern={patternLettersDigitsSpaces}
             onChangeForm={onChangeForm}
             error={formErrors.company}
@@ -146,7 +147,6 @@ function AddCustomerForm() {
             id='email'
             label='Email'
             value={formValues.email}
-            maxLength={25}
             pattern={patternEmail}
             onChangeForm={onChangeForm}
             error={formErrors.email}
@@ -158,7 +158,6 @@ function AddCustomerForm() {
             id='password'
             label='Password'
             value={formValues.password}
-            maxLength={25}
             pattern={patternLettersDigitsNoSpaces}
             onChangeForm={onChangeForm}
             error={formErrors.password}
