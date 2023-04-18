@@ -2,26 +2,98 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+/* Typography */
+@layer base {
+  .inter-20 {
+    @apply font-inter font-bold not-italic text-gray-800;
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .inter-16 {
+    @apply font-inter font-medium not-italic text-gray-800;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .label {
+    @apply font-inter text-base font-medium not-italic;
+    font-size: 16px;
+    line-height: 24px;
+    color: #475569;
+  }
+  .column {
+    @apply font-inter text-base font-medium not-italic;
+    font-size: 16px;
+    line-height: 24px;
+    color: #94a3b8;
+  }
+  .text-input {
+    @apply font-inter font-normal not-italic;
+    font-size: 16px;
+    line-height: 24px;
+    color: #0f172a;
+  }
+  .error {
+    @apply font-inter font-normal not-italic;
+    color: #f87171;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .placeholder {
+    @apply font-inter font-normal not-italic;
+    color: #94a3b8;
+    font-size: 14px;
+    line-height: 20px;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/* Button */
+@layer base {
+  .button {
+    @apply w-full bg-[#0EA5E9] hover:bg-[#0284C7] text-white font-bold active:mt-[1px];
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 8px;
+  }
+}
+
+/* Input */
+@layer base {
+  .input {
+    @apply w-full border border-[#E2E8F0] bg-white;
+    padding: 7px 12px;
+    border-radius: 8px;
+    margin-top: 10px;
+  }
+  .input:focus {
+    box-shadow: 0px 0px 0px 2px #bae6fd;
+    outline: none;
+    border: 1px solid white;
+  }
+}
+
+/* Radio Group */
+.radio-group {
+  @apply flex w-full h-[40px] p-[4px] bg-[#F1F5F9] rounded-[8px];
+}
+.radio {
+  z-index: 100;
+  appearance: none;
+  border-radius: 0;
+  width: 100%;
+  height: 32px;
+  cursor: pointer;
+}
+.radio:checked {
+  background-color: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1),
+    0px 1px 2px -1px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+.label-center {
+  z-index: 1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
 }
