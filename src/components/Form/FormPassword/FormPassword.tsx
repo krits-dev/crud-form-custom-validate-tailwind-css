@@ -69,7 +69,7 @@ FormPassword.defaultProps = {
   id: '',
   label: '',
   value: '',
-  maxLength: 25,
+  maxLength: 30,
   error: '',
   validate: () => null,
   onChangeForm: () => null,
