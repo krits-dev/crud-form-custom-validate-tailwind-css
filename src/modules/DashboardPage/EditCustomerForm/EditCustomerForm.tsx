@@ -141,6 +141,7 @@ function EditCustomerForm() {
             id='email'
             label='Email'
             value={formValues.email}
+            maxLength={40}
             pattern={patternEmail}
             onChangeForm={onChangeForm}
             error={formErrors.email}

@@ -158,6 +158,7 @@ function AddCustomerForm() {
             id='password'
             label='Password'
             value={formValues.password}
+            maxLength={40}
             pattern={patternLettersDigitsNoSpaces}
             onChangeForm={onChangeForm}
             error={formErrors.password}
