@@ -33,7 +33,7 @@ Input.defaultProps = {
   label: '',
   type: 'text',
   value: '',
-  maxLength: 12,
+  maxLength: 25,
   onChange: () => null,
 }
 
